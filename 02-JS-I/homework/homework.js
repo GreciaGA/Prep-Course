@@ -188,12 +188,14 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   resultado = Math.sign(numero);
-  if(resultado = 1){
+  if(resultado == 1){
     return "Es positivo";
-  } else if(resultado = -1){
+  } else if(resultado == -1){
     return "Es negativo";
+  } else if (resultado == 0) {
+    return false;
   } else {
-    return "Es negativo";
+    return false;
   }
 }
 
@@ -201,24 +203,24 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  return concat(str + "!");
+  return str.concat("!");
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  return concat(nombre, " ", apellido);
+  
+  return nombre.concat(" ", apellido);
+  // return nombre.join(apellido);
+   
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  // ????????
-  let palabra= "Hola"
-  let espacio=" "
-  return concat(palabra + espacio + nombre + "!");
+  return "Hola " + nombre.concat("!");
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -256,15 +258,21 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  // ????????
+  // 
 
-  array = ['a','e','i','o','u'];
-  array.forEach(element => {
-    if(letra == array.element){
-      return "Es vocal"
-    }
-  });
-  
+  switch(letra){
+    case "a": return "Es vocal";
+    break;
+    case "e": return "Es vocal";
+    break;
+    case "i": return "Es vocal";
+    break;
+    case "o": return "Es vocal";
+    break;
+    case "u": return "Es vocal";
+    break;
+    default: return "Dato incorrecto";
+  }  
 }
 
 
