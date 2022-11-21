@@ -23,13 +23,13 @@ describe('crearGato(nombre, edad)', function() {
     expect(crearGato('Snowball II', 5).nombre).toBe('Snowball II');
     expect(crearGato('Snowball II', 5).edad).toBe(5);
   });
-  it('should add a method called meow to the new cat object', function() {
+  it('Debes agregar un método llamado Meow! al nuevo objeto gato', function() {
     expect(crearGato('Snowball III', 2).meow()).toBe('Meow!');
   });
 });
 
 describe('agregarPropiedad(object, property)', function() {
-  it('should add the property to the object with a value of null', function() {
+  it('Debería agregar property al objeto con un valor de null', function() {
     const object = {
       x: 1,
       y: 2,
@@ -44,7 +44,7 @@ describe('agregarPropiedad(object, property)', function() {
 });
 
 describe('invocarMetodo(object, method)', function() {
-  it('should invoke the method on the object', function() {
+  it('Debería invocar el método en el objecto', function() {
     const object = {
       x: 0,
       incrementX: function() {
