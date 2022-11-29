@@ -160,16 +160,14 @@ function operadoresLogicos(num1, num2, num3) {
   let n1 = Math.sign(num1)
   let n2 = Math.sign(num2)
   let n3 = Math.sign(num3)
-  if(num1>num2 && num1>num3){
-    if(n1 ==1){
-      return "Número 1 es mayor y positivo";
-    }
+  if(num1===0 || num2===0 || num3===0){
+    return "Error";
   }else if (n1 ==-1 || n2==-1 || n3==-1){
     return "Hay negativos";
   }else if (num3>num1 && num3>num2){
     return num3+1;
-  }else if (num1==0 || nun2==0 || num3==0){
-    return "Error";
+  }else if (num1>num2 && num1>num3){
+      return "Número 1 es mayor y positivo";
   }else {
     return false;
   }
@@ -207,19 +205,36 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  let laTablaDelSeis = [];
+    for(let i = 0; i <= 10; i++){
+      laTablaDelSeis.push(6 * i)
+        }
+    return laTablaDelSeis;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  if (numero > -1000 && numero < -99) {
+    return true;
+  } else if (numero > 99 && numero < 1000) {
+      return true;
+  } else {
+      return false;
+  }
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let n = 8;
+  let res = numero;
+  do { 
+      n = n - 1
+      res = res + 5
+  } while (n > 0)
+  return res
 }
 
 
